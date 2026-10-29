@@ -114,6 +114,35 @@ nav a:hover
     border-bottom: 3px solid #760001;
 }
 
+/* Couleur d'accent propre à chaque page (hover + état actif) */
+.page-research nav a:hover, .page-research nav a.active,
+.page-teaching nav a:hover, .page-teaching nav a.active,
+.page-biosketch nav a:hover, .page-biosketch nav a.active
+{
+    color: #760001;
+    border-bottom-color: #760001;
+}
+
+/* Le lien "Math" est vert sur toutes les pages (couleur dédiée à cette section) */
+nav a[href="math.html"]:hover,
+nav a[href="math.html"].active
+{
+    color: #1d7a3e;
+    border-bottom-color: #1d7a3e;
+}
+
+/* Sur la page Math, le nom (header) reste noir, et devient vert (avec
+   soulignement) uniquement au survol, comme le rouge sur les autres pages */
+.page-math header h1 a
+{
+    color: #181818;
+}
+
+.page-math header h1 a:hover
+{
+    color: #1d7a3e;
+}
+
 @media all and (max-width: 1024px)
 {
     nav
@@ -163,6 +192,84 @@ main
 main p
 {
     font-size: 0.8em;
+}
+
+/* Page "Math for all" : thème vert (accent de la page) */
+.page-math .wip-topic
+{
+    border-left-color: #1d7a3e;
+    background: #f3f8f4;
+}
+
+/* Page "Math for all" : mention "en travaux" discrète + sections de vulgarisation */
+main .wip-note
+{
+    font-size: 0.7em;
+    font-style: italic;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.wip-topic
+{
+    margin-top: 25px;
+    padding: 12px 15px;
+    border-left: 3px solid #760001;
+    background: #faf7f7;
+}
+
+.wip-topic h3
+{
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.wip-topic p
+{
+    font-size: 0.8em;
+}
+
+.wip-topic .soon
+{
+    font-size: 0.7em;
+    font-style: italic;
+    color: #999;
+}
+
+/* "En travaux", discret */
+.wip-note
+{
+    font-size: 0.8em;
+    color: #8a8a8a;
+    font-style: italic;
+}
+
+.wip-topic
+{
+    border: 1px dashed #d0d0d0;
+    border-radius: 5px;
+    padding: 10px 12px;
+    margin-top: 15px;
+    background-color: #fafafa;
+}
+
+.wip-topic h3
+{
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0 0 5px 0;
+}
+
+.wip-tag
+{
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #9a9a9a;
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    white-space: nowrap;
 }
 /* La photo sur la première page */
 aside
